@@ -10,32 +10,11 @@ const binaryStrings = ['1010', '10000', '1', '10', '11', '0',
 
 
 function convertToBinary(base10: number): string {
-  if (base10 === 0) {
-    return '0';
-  }
-  let binary = '';
-  while (base10 >= 1) {
-    const remainder = base10 % 2 ? '1' : '0';
-    base10 = Math.floor(base10 / 2);
-    binary = `${remainder}${binary}`;
-  }
-  let firstOne = binary.indexOf('1');
-  binary = binary.substring(firstOne, binary.length);
-
-  return binary;
+  return "0";
 }
 
 function convertToBase10(binary: string): number {
-  let base10 = 0;
-  let currentDecimal = 1;
-  for (let i = binary.length - 1; i >= 0; i--) {
-    const digit = binary.charAt(i);
-    if (digit === '1') {
-      base10 += currentDecimal;
-    }
-    currentDecimal *= 2;
-  }
-  return base10;
+  return 0;
 }
 
 for (let i = 0; i < numbers.length - 1; i++) {
